@@ -119,7 +119,7 @@ public class QuestionDetailActivity extends AppCompatActivity {
             DatabaseReference mDatabaseReference = FirebaseDatabase.getInstance().getReference();
             DatabaseReference ref = mDatabaseReference.child(Const.ContentsPATH).child(String.valueOf(mQuestion.getGenre())).child(mQuestion.getQuestionUid());
             Map<String, Object> data = new HashMap<>();
-            data.put("like", mQuestion.isLike() ? "true" : "false");
+            data.put("favorite", mQuestion.isLike() ? "true" : "false");
             ref.updateChildren(data);
         }
     }

@@ -30,7 +30,7 @@ public class LikeListActivity extends AppCompatActivity {
             int genre = Integer.parseInt(dataSnapshot.getKey());
             for (Object key : map.keySet()) {
                 HashMap temp = (HashMap) map.get((String) key);
-                boolean like = ((String) temp.get("like")).equals("true");
+                boolean like = ((String) temp.get("favorite")).equals("true");
 
                 if(like){
                     String title = (String) temp.get("title");
