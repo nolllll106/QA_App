@@ -80,7 +80,7 @@ public class QuestionDetailListAdapter extends BaseAdapter {
             Button favoriteButton = (Button)convertView.findViewById(R.id.likeButton);
             favoriteButton.setText(favorite ? "♥" : "♡");
             if (user == null) {
-                favoriteButton.setEnabled(false);
+                favoriteButton.setVisibility(View.INVISIBLE);
             } else {
                 favoriteButton.setOnClickListener(new View.OnClickListener() {
                     @Override
